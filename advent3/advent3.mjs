@@ -21,27 +21,12 @@ function parseLinePt1(line) {
 }
 
 function findCommon(string1, string2, string3) {
-    if (string3) {
-        return findCommon(string1, findCommon(string2, string3))
-    }
-    let common = "";
     for (const item of string1) {
-        let cont = false;
-        for (let i of common) {
-            if (item === i) {
-                cont = true;
-                break;
-            }
-        }
-        if (cont) {
-            continue;
-        }
-        const index = string2.indexOf(item);
-        if (index !== -1) {
-            common = common.concat(item);
+        if (string2.indexOf(item) !== -1 &&
+            (!string3 || string3.indexOf(item) !== -1)) {
+            return item;
         }
     }
-    return common;
 }
 
 function sumLetters() {
