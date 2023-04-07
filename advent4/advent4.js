@@ -28,4 +28,3 @@ function parseLine(line) {
 
 let sum = 0;
 let sum2 = 0;
-read()

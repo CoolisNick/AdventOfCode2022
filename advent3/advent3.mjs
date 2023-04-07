@@ -6,8 +6,8 @@ class Run {
     letters = [];
     part;
 
-    constructor(options) {
-        this.part = options.part;
+    constructor({part}) {
+        this.part = part;
     }
 
     parseLinePt1(line) {
